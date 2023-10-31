@@ -1,6 +1,3 @@
-
-
-
 def print_menu():
     print("Menu")
     print("-------------")
