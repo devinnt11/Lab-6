@@ -1,6 +1,3 @@
-
-
-
 def print_menu():
     print("Menu")
     print("-------------")
@@ -8,7 +5,7 @@ def print_menu():
     print("2. Decode")
     print("3. Quit")
 
-def encoder(password):
+def password_encoder(password):
     result = ''
     for char in password:
         new_digit = (int(char) + 3) % 10
@@ -21,7 +18,7 @@ def main():
         menu_option = input("Please enter an option:")
         if menu_option == "1":
             password = input("Please enter your password to encode:")
-            print(encoder(password))
+            print(password_encoder(password))
         elif menu_option =="2":
             print(f"The encoded password is {password}, and the original password is {decoder(password)}")
         elif menu_option == "3":
