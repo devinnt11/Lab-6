@@ -11,6 +11,18 @@ def password_encoder(password):
         new_digit = (int(char) + 3) % 10
         result += str(new_digit)
     return result
+
+
+def decode(encoded_password):
+    decoder_password = ""
+
+    for digit in encoded_password:
+        # Convert the character to an integer and shift it down by 3
+        decoded_digit = str(int(digit) - 3)
+        decoder_password += decoded_digit
+
+    return decoder_password
+
 def main():
     run_code = True
     while run_code:
